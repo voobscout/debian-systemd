@@ -3,4 +3,6 @@
 set -e
 
 docker run -itd --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro maint/debian-systemd
-docker ps
+
+echo -e "\nContainer ID:"
+docker ps -lq
