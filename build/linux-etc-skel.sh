@@ -7,4 +7,4 @@ wget -O $HOME/.bashrc https://raw.githubusercontent.com/htien/linux-etc-skel/mas
 wget -O $HOME/.gitconfig https://raw.githubusercontent.com/htien/linux-etc-skel/master/gitconfig
 wget -O $HOME/.ssh/config https://raw.githubusercontent.com/htien/linux-etc-skel/master/.ssh/config
 
-chmod -R u=rwX,go= $HOME/.bash* $HOME/.ssh
+chmod -R u=rwX,go= $HOME/.bash* $HOME/.gitconfig $HOME/.ssh/
