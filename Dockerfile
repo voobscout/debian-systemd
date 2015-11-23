@@ -21,8 +21,9 @@ COPY build/* ./.build~/
 ##
 
 RUN \
-	$HOME/.build~/dockerize-systemd.sh \
-	$HOME/.build~/linux-etc-skel.sh \
+	chmod -R u+x $HOME/.build~/*.sh \
+	&& $HOME/.build~/dockerize-systemd.sh \
+	&& $HOME/.build~/linux-etc-skel.sh \
 
 
 ##
