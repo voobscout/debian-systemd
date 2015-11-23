@@ -21,7 +21,9 @@ COPY build/* ./.build~/
 ##
 
 RUN \
-	chmod -R u+x $HOME/.build~/*.sh \
+	apt-get update \
+	&& apt-get install -y wget \
+	&& chmod -R u=rwx,go= $HOME/.build~/*.sh \
 	&& $HOME/.build~/dockerize-systemd.sh \
 	&& $HOME/.build~/linux-etc-skel.sh \
 
@@ -32,6 +34,7 @@ RUN \
 
 	&& rm -rf \
 		$HOME/.build~ \
+		$HOME/.bash_history \
 		/var/log/apt/* \
 		/var/log/alternatives.log \
 		/var/log/bootstrap.log \

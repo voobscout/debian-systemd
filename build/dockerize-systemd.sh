@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 if [ "$container" != "docker"]; then
 	echo '$container must be set to "docker" for this script (and systemd) to work.' >&2
