@@ -32,6 +32,7 @@ RUN \
 ## CLEANUP
 ##
 
+	&& apt-get clean \
 	&& rm -rf \
 		$HOME/.build~ \
 		$HOME/.bash_history \
