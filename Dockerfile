@@ -17,13 +17,32 @@ WORKDIR /root
 COPY build/* ./.build~/
 
 ##
-## DOCKERIZE SYSTEMD
+## UPGRADE OS
 ##
 
 RUN \
-	apt-get update \
+	cp /etc/apt/sources.list /etc/apt/sources.list.origin \
+	&& cat /etc/apt/sources.list.origin \
+	| sed 's|deb http://httpredir.debian.org/debian jessie main|& contrib non-free|1' \
+	| sed 's|deb http://httpredir.debian.org/debian jessie-updates main|& contrib non-free|1' \
+	| sed 's|deb http://security.debian.org jessie/updates main|& contrib non-free|1' \
+	> /etc/apt/sources.list \
+	&& apt-get update \
+	&& apt-get upgrade -y \
+
+
+##
+## INSTALLING SOMETHING
+##
+
 	&& apt-get install -y wget \
 	&& chmod -R u=rwx,go= $HOME/.build~/*.sh \
+
+
+##
+## DOCKERIZE SYSTEMD
+##
+
 	&& $HOME/.build~/dockerize-systemd.sh \
 	&& $HOME/.build~/linux-etc-skel.sh \
 
