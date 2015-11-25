@@ -37,7 +37,7 @@ rm -rf \
 	/tmp/*
 EOF
 
-chmod u=rwx,go= $HOME/bin/*.sh
+chmod u=rwx,go= $HOME/bin/sys-cleanup.sh
 
 
 ##
