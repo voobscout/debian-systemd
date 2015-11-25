@@ -1,6 +1,13 @@
 #!/bin/sh
+#
+# Docker Maintainers <docker-maint@echip.io>
+#
+# @filename: linux-etc-skel.sh
+#
 
 set -e
+
+# Download files from "github.com/htien/linux-etc-skel".
 
 DL_URL=https://raw.githubusercontent.com/htien/linux-etc-skel/master
 
@@ -12,6 +19,18 @@ do
 done
 
 ([ -d $HOME/.ssh/ ] || mkdir $HOME/.ssh/) && wget -qO $HOME/.ssh/config $DL_URL/ssh/config
+
+
+# Add the greeting message into .bashrc file.
+cat >> $HOME/.bashrc <<'EOT'
+
+# Greeting message.
+echo -e "\n"
+echo Welcome to Docker container!
+EOT
+
+
+# Set modes and remove something.
 
 chmod -R u=rwX,go= $HOME/.bash* $HOME/.gitconfig $HOME/.ssh/
 rm -f $HOME/.bash_history
