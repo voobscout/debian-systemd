@@ -28,7 +28,7 @@ RUN \
 	| sed 's|deb http://security.debian.org jessie/updates main|& contrib non-free|1' \
 	> /etc/apt/sources.list \
 	&& apt-get update \
-	&& apt-get upgrade -y \
+	&& apt-get dist-upgrade -y \
 
 
 ##
