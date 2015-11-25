@@ -11,8 +11,7 @@ set -e
 ## DO SOMETHING
 ##
 
-[ -d $HOME/bin ] || mkdir $HOME/bin
-chmod u=rwx,go= $HOME/bin
+[ -d $HOME/bin ] || mkdir $HOME/bin && chmod u=rwx,go= $HOME/bin
 
 cat > $HOME/bin/sys-cleanup.sh <<'EOF'
 #!/bin/sh
