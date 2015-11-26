@@ -19,6 +19,8 @@ cat /etc/apt/sources.list.origin \
 | sed 's|deb http://security.debian.org jessie/updates main|& contrib non-free|1' \
 > /etc/apt/sources.list
 
+chmod -R u=rwX,go= /etc/apt/
+
 apt-get update
 apt-get dist-upgrade -y
 
