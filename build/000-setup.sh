@@ -29,7 +29,7 @@ apt-get dist-upgrade --no-install-recommends -y
 ## DO SOMETHING.
 ##
 
-apt-get install -y --no-install-recommends ca-certificates wget
+apt-get install --no-install-recommends -y ca-certificates wget
 
 
 ##
