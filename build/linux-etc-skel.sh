@@ -9,7 +9,7 @@ set -e
 
 # Download files from "github.com/htien/linux-etc-skel".
 
-DL_URL=https://raw.githubusercontent.com/htien/linux-etc-skel/master
+DL_URL=http://github.com/htien/linux-etc-skel/raw/master
 
 echo "bash_profile\n\
 bashrc\n\
@@ -34,3 +34,4 @@ EOT
 
 chmod -R u=rwX,go= $HOME/.bash* $HOME/.gitconfig $HOME/.ssh/
 rm -f $HOME/.bash_history
+

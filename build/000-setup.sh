@@ -8,7 +8,7 @@
 set -e
 
 ##
-## UPGRADING OS
+## UPGRADING OS.
 ##
 
 cp /etc/apt/sources.list /etc/apt/sources.list.origin
@@ -26,14 +26,14 @@ apt-get dist-upgrade --no-install-recommends -y
 
 
 ##
-## DO SOMETHING
+## DO SOMETHING.
 ##
 
-apt-get install --no-install-recommends -y wget
+apt-get install -y --no-install-recommends ca-certificates wget
 
 
 ##
-## DOCKERIZE SYSTEMD
+## DOCKERIZE SYSTEMD.
 ##
 
 $HOME/.build~/dockerize-systemd.sh
@@ -41,7 +41,7 @@ $HOME/.build~/linux-etc-skel.sh
 
 
 ##
-## CLEANUP
+## CLEANUP.
 ##
 
 $HOME/.build~/sys-cleanup.sh
