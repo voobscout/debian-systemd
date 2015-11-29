@@ -22,14 +22,14 @@ cat /etc/apt/sources.list.origin \
 chmod -R u=rwX,go= /etc/apt/
 
 apt-get update
-apt-get dist-upgrade -y
+apt-get dist-upgrade --no-install-recommends -y
 
 
 ##
 ## DO SOMETHING
 ##
 
-apt-get install -y wget
+apt-get install --no-install-recommends -y wget
 
 
 ##
