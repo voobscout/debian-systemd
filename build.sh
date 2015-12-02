@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
+#
+# @filename: build.sh
+#
 
 set -e
 

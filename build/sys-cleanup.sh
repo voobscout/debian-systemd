@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Docker Maintainers <docker-maint@echip.io>
 #
@@ -14,7 +14,7 @@ set -e
 [ -d $HOME/bin ] || mkdir $HOME/bin && chmod u=rwx,go= $HOME/bin
 
 cat > $HOME/bin/sys-cleanup.sh <<'EOF'
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Docker Maintainers <docker-maint@echip.io>
 #

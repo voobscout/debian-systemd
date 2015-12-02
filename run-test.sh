@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
+#
+# @filename: run-test.sh
+#
 
 set -e
 
