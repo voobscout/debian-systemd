@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM maint/debian:latest
 
 MAINTAINER Debian-Systemd Docker Maintainers <docker-maint@echip.io>
 
